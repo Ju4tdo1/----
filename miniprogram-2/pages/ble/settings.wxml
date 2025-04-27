@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="settings-list">
+    <view class="settings-item">
+      <view class="settings-title">连接超时时间 (秒)</view>
+      <view class="settings-value" bindtap="editTimeout">
+        <text>{{timeout || 10}}</text>
+        <view class="settings-arrow"></view>
+      </view>
+    </view>
+    
+    <view class="settings-item">
+      <view class="settings-title">信号强度要求 (dBm)</view>
+      <view class="settings-value" bindtap="editRssiThreshold">
+        <text>{{rssiThreshold || -80}}</text>
+        <view class="settings-arrow"></view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="settings-tips">
+    <text>提示：信号强度值越小，表示信号越弱。建议设置在-80到-40之间。</text>
+  </view>
+</view> 

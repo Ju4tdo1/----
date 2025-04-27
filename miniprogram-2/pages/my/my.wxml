@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="menu-list menu-list-top">
+    <view class="menu-item" bindtap="navigateToBleHistory">
+      <view class="menu-item-left">
+        <image class="menu-icon" src="/images/ble-history.png"></image>
+        <text class="menu-text">蓝牙历史记录</text>
+      </view>
+      <image class="arrow-icon" src="/images/arrow-right.png"></image>
+    </view>
+
+    <view class="menu-item" bindtap="navigateToSettings">
+      <view class="menu-item-left">
+        <image class="menu-icon" src="/images/settings.png"></image>
+        <text class="menu-text">设置</text>
+      </view>
+      <image class="arrow-icon" src="/images/arrow-right.png"></image>
+    </view>
+  </view>
+
+  <view class="user-info" bindtap="{{!userInfo ? 'navigateToLogin' : ''}}">
+    <image class="avatar" src="{{userInfo.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+    <view class="user-detail">
+      <text class="nickname">{{userInfo.nickName || '点击登录'}}</text>
+      <text class="user-id" wx:if="{{userInfo.nickName}}">ID: {{userInfo.userId}}</text>
+    </view>
+  </view>
+
+  <view class="menu-item" bindtap="navigateToAbout">
+    <view class="menu-item-left">
+      <image class="menu-icon" src="/images/about.png"></image>
+      <text class="menu-text">关于我们</text>
+    </view>
+    <image class="arrow-icon" src="/images/arrow-right.png"></image>
+  </view>
+
+  <view class="logout-button" bindtap="handleLogout" wx:if="{{userInfo.nickName}}">
+    退出登录
+  </view>
+</view> 

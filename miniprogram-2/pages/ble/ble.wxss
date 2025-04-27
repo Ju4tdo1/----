@@ -1,0 +1,106 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.status-bar {
+    width: 100%;
+    padding: 20rpx 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20rpx;
+}
+
+.status-text {
+    font-size: 28rpx;
+    padding: 10rpx 30rpx;
+    border-radius: 30rpx;
+}
+
+.status-text.available {
+    background-color: #4CD964;
+    color: white;
+}
+
+.status-text.unavailable {
+    background-color: #FF3B30;
+    color: white;
+}
+
+.device-list {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 30rpx;
+}
+
+.no-devices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200rpx;
+    color: #999;
+    font-size: 28rpx;
+}
+
+.device-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30rpx;
+    background-color: #ffffff;
+    margin-bottom: 20rpx;
+    border-radius: 20rpx;
+    box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.device-info {
+    flex: 1;
+}
+
+.device-name {
+    font-size: 32rpx;
+    color: #333;
+    margin-bottom: 10rpx;
+}
+
+.device-rssi {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.connect-icon {
+    font-size: 28rpx;
+    color: #007AFF;
+    padding: 10rpx 20rpx;
+    border: 1px solid #007AFF;
+    border-radius: 30rpx;
+}
+
+.scan-button-container {
+    width: 100%;
+    padding: 20rpx 0;
+}
+
+.scan-button {
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    background-color: #007AFF;
+    color: white;
+    font-size: 32rpx;
+    border-radius: 45rpx;
+}
+
+.scan-button.scanning {
+    background-color: #ff3b30;
+}
+
+.scan-button[disabled] {
+    background-color: #cccccc;
+    opacity: 0.6;
+}
+    

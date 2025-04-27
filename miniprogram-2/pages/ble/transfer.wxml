@@ -1,0 +1,23 @@
+<view class="container">
+  <!-- 统计与操作栏 -->
+  <view class="top-bar" style="position: relative; left: 0rpx; top: -200rpx">
+    <button class="btn-blue" bindtap="clearReceivedData" style="position: relative; left: -61rpx; top: -10rpx">清空接收区</button>
+    <text class="stat-text" style="position: relative; left: 2rpx; top: -18rpx">发送字节数：{{sentBytes || 0}}</text>
+    <text class="stat-text" style="position: relative; left: 14rpx; top: -18rpx">接收字节数：{{receivedBytes || 0}}</text>
+  </view>
+
+  <!-- 接收数据区 -->
+  <view class="data-area" style="position: relative; left: 0rpx; top: -160rpx">
+    <scroll-view class="data-scroll" scroll-y>
+      <block wx:for="{{receivedData}}" wx:key="index">
+        <view class="data-item">{{item}}</view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <!-- 发送数据区 -->
+  <view class="input-area" style="position: relative; left: 0rpx; top: -104rpx">
+    <textarea class="input-text" placeholder="输入要发送的数据" value="{{inputValue}}" bindinput="onInputChange"/>
+    <button class="btn-blue" bindtap="sendData" disabled="{{!isConnected}}">发送</button>
+  </view>
+</view>

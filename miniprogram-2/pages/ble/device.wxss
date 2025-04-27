@@ -1,0 +1,164 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.device-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.device-name {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.device-status {
+  font-size: 28rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+}
+
+.device-status.connected {
+  background-color: #4CD964;
+  color: white;
+}
+
+.device-status.disconnected {
+  background-color: #FF3B30;
+  color: white;
+}
+
+.device-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.action-btn {
+  width: 240rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  color: white;
+}
+
+.action-btn.connect {
+  background-color: #4CD964;
+}
+
+.action-btn.disconnect {
+  background-color: #FF3B30;
+}
+
+.auto-reconnect {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.auto-reconnect text {
+  margin-right: 20rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+
+.services-section, .characteristics-section, .characteristic-properties {
+  background-color: #ffffff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.service-picker, .characteristic-picker {
+  width: 100%;
+  height: 80rpx;
+  background-color: #f9f9f9;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.picker-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.picker-arrow {
+  width: 0;
+  height: 0;
+  border-left: 10rpx solid transparent;
+  border-right: 10rpx solid transparent;
+  border-top: 10rpx solid #999;
+}
+
+.properties-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.property-item {
+  background-color: #f9f9f9;
+  padding: 20rpx;
+  border-radius: 10rpx;
+}
+
+.property-name {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.transfer-section {
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.transfer-btn {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #007AFF;
+  color: white;
+  font-size: 32rpx;
+  border-radius: 45rpx;
+  margin-bottom: 30rpx;
+}
+
+.transfer-btn[disabled] {
+  background-color: #cccccc;
+  opacity: 0.6;
+} 

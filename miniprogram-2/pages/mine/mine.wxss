@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.profile-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 40rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  border-radius: 0 0 20rpx 20rpx;
+}
+
+.not-logged-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 0;
+}
+
+.default-avatar-container {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #e0e0e0;
+  border-radius: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.default-avatar-text {
+  color: #999;
+  font-size: 28rpx;
+}
+
+.login-text {
+  font-size: 32rpx;
+  color: #007AFF;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-container {
+  margin-right: 30rpx;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.nickname-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10rpx;
+}
+
+.edit-icon {
+  font-size: 24rpx;
+  color: #007AFF;
+}
+
+.logout-btn {
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  color: #ff3b30;
+  background-color: transparent;
+  border: 1px solid #ff3b30;
+  border-radius: 35rpx;
+  padding: 0;
+}
+
+.menu-section {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 40rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-title {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.menu-arrow {
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 4rpx solid #999;
+  border-right: 4rpx solid #999;
+  transform: rotate(45deg);
+}
+
+image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+    

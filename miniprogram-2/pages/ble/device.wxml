@@ -1,0 +1,77 @@
+<view class="container">
+  <view class="device-header">
+    <view class="device-name">{{deviceName}}</view>
+    <view class="device-status {{connected ? 'connected' : 'disconnected'}}">
+      {{connected ? '已连接' : '未连接'}}
+    </view>
+  </view>
+  
+  <view class="device-actions">
+    <button 
+      class="action-btn {{connected ? 'disconnect' : 'connect'}}" 
+      bindtap="{{connected ? 'disconnect' : 'reconnect'}}"
+    >
+      {{connected ? '断开连接' : '重新连接'}}
+    </button>
+    
+    <view class="auto-reconnect">
+      <text>自动重连</text>
+      <switch checked="{{autoReconnect}}" bindchange="toggleAutoReconnect" />
+    </view>
+  </view>
+  
+  <view class="services-section">
+    <view class="section-title">服务列表</view>
+    <picker 
+      bindchange="onServiceChange" 
+      value="{{selectedService}}" 
+      range="{{services}}" 
+      range-key="uuid"
+      class="service-picker"
+    >
+      <view class="picker-content">
+        <text>{{selectedService || '请选择服务'}}</text>
+        <view class="picker-arrow"></view>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="characteristics-section">
+    <view class="section-title">特征值列表</view>
+    <picker 
+      bindchange="onCharacteristicChange" 
+      value="{{selectedCharacteristic}}" 
+      range="{{characteristics}}" 
+      range-key="uuid"
+      class="characteristic-picker"
+    >
+      <view class="picker-content">
+        <text>{{selectedCharacteristic || '请选择特征值'}}</text>
+        <view class="picker-arrow"></view>
+      </view>
+    </picker>
+  </view>
+  
+  <view class="characteristic-properties" wx:if="{{selectedCharacteristic}}">
+    <view class="section-title">特征值属性</view>
+    <view class="properties-list">
+      <view class="property-item" wx:for="{{characteristics}}" wx:key="uuid" wx:if="{{item.uuid === selectedCharacteristic}}">
+        <view class="property-name">通知: {{item.properties.notify ? '支持' : '不支持'}}</view>
+        <view class="property-name">指示: {{item.properties.indicate ? '支持' : '不支持'}}</view>
+        <view class="property-name">读取: {{item.properties.read ? '支持' : '不支持'}}</view>
+        <view class="property-name">写入: {{item.properties.write ? '支持' : '不支持'}}</view>
+        <view class="property-name">无响应写入: {{item.properties.writeNoResponse ? '支持' : '不支持'}}</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="transfer-section">
+    <button 
+      class="transfer-btn" 
+      bindtap="goToTransfer"
+      disabled="{{!connected || !selectedService || !selectedCharacteristic}}"
+    >
+      数据传输
+    </button>
+  </view>
+</view> 

@@ -1,0 +1,20 @@
+<view class="container" style="height: 1218rpx; display: flex; box-sizing: border-box">
+  <view class="profile-section">
+    
+    
+    
+  </view>
+  
+  <view class="menu-section" style="position: relative; left: 0rpx; top: -1016rpx">
+    <view class="menu-item" bindtap="goToBleHistory" style="position: relative; left: 0rpx; top: -1rpx">
+      <view class="menu-title">蓝牙历史连接记录</view>
+      <view class="menu-arrow"></view>
+    </view>
+    
+    <view class="menu-item" bindtap="goToSettings" style="position: relative; left: 0rpx; top: 0rpx">
+      <view class="menu-title">设置</view>
+      <view class="menu-arrow"></view>
+    </view>
+  </view>
+</view>
+    

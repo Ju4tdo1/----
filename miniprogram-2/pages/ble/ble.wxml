@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="status-bar">
+    <view class="status-text {{bluetoothAvailable ? 'available' : 'unavailable'}}">
+      蓝牙状态: {{bluetoothAvailable ? '可用' : '不可用'}}
+    </view>
+  </view>
+
+  <view class="device-list">
+    <block wx:if="{{devices.length > 0}}">
+      <view 
+        class="device-item" 
+        wx:for="{{devices}}" 
+        wx:key="deviceId"
+        bindtap="connectDevice"
+        data-device="{{item}}"
+      >
+        <view class="device-info">
+          <view class="device-name">{{item.name || '未知设备'}}</view>
+          <view class="device-rssi">信号强度: {{item.RSSI}} dBm</view>
+        </view>
+        <view class="connect-icon">连接</view>
+      </view>
+    </block>
+    <view class="no-devices" wx:else>
+      <text>{{isScanning ? '搜索中...' : '未发现设备'}}</text>
+    </view>
+  </view>
+  
+  <view class="scan-button-container">
+    <button 
+      class="scan-button {{isScanning ? 'scanning' : ''}}" 
+      bindtap="toggleScan"
+      disabled="{{!bluetoothAvailable}}"
+    >
+      {{isScanning ? '停止扫描' : '开始扫描'}}
+    </button>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+{
+    "pages": [
+      "pages/ble/ble",
+      "pages/ble/device",
+      "pages/ble/transfer",
+      "pages/ble/history",
+      "pages/ble/settings",
+      "pages/mine/mine",
+      "pages/login/login"
+    ],
+    "window": {
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText": "蓝牙调试",
+      "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+      "color": "#666",
+      "selectedColor": "#007AFF",
+      "backgroundColor": "#FFFFFF",
+      "list": [
+        {
+          "pagePath": "pages/ble/ble",
+          "text": "蓝牙",
+          "iconPath": "images/蓝牙.png",
+          "selectedIconPath": "images/蓝牙连接.png"
+        },
+        {
+          "pagePath": "pages/mine/mine",
+          "text": "我的",
+          "iconPath": "images/我的.png",
+          "selectedIconPath": "images/我的选中.png"
+        }
+      ]
+    },
+    "lazyCodeLoading": "requiredComponents"
+  }
